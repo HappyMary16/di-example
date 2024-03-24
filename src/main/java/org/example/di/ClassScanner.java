@@ -47,7 +47,7 @@ public class ClassScanner {
         try {
             return Class.forName(packageName + "." + className.substring(0, className.lastIndexOf('.')));
         } catch (ClassNotFoundException e) {
-            System.err.println(STR."Class '\{packageName}.\{className} was not found.");
+            System.err.println(STR. "Class '\{ packageName }.\{ className } was not found." );
         }
         return null;
     }

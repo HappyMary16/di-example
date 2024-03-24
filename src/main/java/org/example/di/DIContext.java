@@ -44,8 +44,8 @@ public class DIContext {
     private Object createBean(Class type) {
         Constructor constructor = type.getDeclaredConstructors()[0];
 
-        Object[] constructorParameters = new Object[constructor.getParameterCount()];
         Class[] parameterTypes = constructor.getParameterTypes();
+        Object[] constructorParameters = new Object[constructor.getParameterCount()];
 
         for (int i = 0; i < constructor.getParameterCount(); i++) {
             constructorParameters[i] = getBean(parameterTypes[i]);
