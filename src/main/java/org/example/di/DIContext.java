@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static java.lang.StringTemplate.STR;
+
 public class DIContext {
 
     private final Map<String, Object> beans = new HashMap<>();
@@ -29,7 +31,7 @@ public class DIContext {
             return (BEAN_TYPE) beans.get(name);
         }
 
-        throw new RuntimeException(STR. "Bean with name '\{ name }' was not found." );
+        throw new RuntimeException(STR."Bean with name '\{name}' was not found.");
     }
 
     public <BEAN_TYPE> BEAN_TYPE getBean(Class<BEAN_TYPE> type) {

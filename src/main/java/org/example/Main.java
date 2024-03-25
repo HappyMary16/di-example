@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.db.ParkingDb;
 import org.example.di.DIContext;
 import org.example.model.Car;
 import org.example.service.ParkingService;
