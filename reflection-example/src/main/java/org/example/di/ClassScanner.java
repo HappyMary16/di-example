@@ -18,6 +18,7 @@ public class ClassScanner {
                 .lines()
                 .collect(Collectors.toList());
 
+
         List<Class> classesInCurrentDirectory =
                 directoryContent.stream()
                                 .filter(line -> line.endsWith(".class"))
